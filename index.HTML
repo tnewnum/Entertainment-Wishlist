@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/style.css" />
+  <title>Git it Done</title>
 </head>
-<body>
+
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title">
+        <i class="fas fa-mask"></i> Entertainment Wishlist
+    </h1>
+    <p>Find the top rated games on different platforms and Marvel content!
+    </p>
+  </header>
 
 
+  <main class="flex-row justify-space-between">
+    <div class="col-12 col-md-4">
 
-<script src="./Assets/java.js"></script>    
+      <div class="card">
+        <h3 class="card-header text-uppercase">Platforms</h3>
+        <div id="platform-buttons" class="card-body">
+          <button class="btn">PC</button>
+          <button class="btn">PS5</button>
+          <button class="btn">Xbox</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Marvel</h3>
+        <div id="language-buttons" class="card-body">
+          <button class="btn">Comics</button>
+          <button class="btn">Series</button>
+          <button class="btn">Characters</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+        <h3 class="card-header text-uppercase">Wishlist</h3>
+        <div id="wishlist-input" class="card-body">
+            <label>Enter Items to Wishlist: </label>
+            <input type="text">
+            <button type="submit" class="btn">Enter</button>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-8">
+      <h2 class="subtitle">Showing: <span id="repo-search-term"></span></h2>
+      <div id="repos-container" class="list-group"></div>
+    </div>
+  </main>
+
+  <script src="./assets/java.js"></script>
 </body>
+
+
 </html>
