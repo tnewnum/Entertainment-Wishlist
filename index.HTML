@@ -6,24 +6,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="./assets/style.css" />
   <title>Entertainment Wishlist</title>
 </head>
 
-<body class="flex-column min-100-vh">
+<body class="flex flex-column min-h-full">
   <header class="hero">
     <h1 class="app-title">
         <i class="fas fa-mask"></i> Entertainment Wishlist
     </h1>
-    <p>Find the top rated games on different platforms and Marvel content!
+    <p class="p-2 m-2">Find the top rated games on different platforms and Marvel content!
     </p>
   </header>
 
-
-  <main class="flex-row justify-space-between">
-    <div class="col-12 col-md-4">
+  
+  <main class="flex flex-row justify-between flex-wrap">
+    <div class="flex flex-column">
 
       <div class="card">
         <h3 class="card-header text-uppercase">Platforms</h3>
@@ -45,11 +46,11 @@
     </div>
 
     <div class="card">
-        <h3 class="card-header text-uppercase">Wishlist</h3>
+        <h3 class="card-header uppercase">Wishlist</h3>
         <div id="wishlist-input" class="card-body">
-            <label>Enter Items to Wishlist: </label>
-            <input type="text">
-            <button type="submit" class="btn">Enter</button>
+            <label class="content-center">Enter Items to Wishlist: </label>
+            <input type="text" class="w-full">
+            <button type="submit" class="btn bg-[#DBBCA7]">Enter</button>
         </div>
     </div>
 
