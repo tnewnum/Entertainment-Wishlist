@@ -1,3 +1,7 @@
+
+
+//establish API key and general API call
+
 const apiKey = "f292e982be664ec2994676e290830bc7";
 const platformButtonEl = document.querySelectorAll(".class-pc")
 platformButtonEl.forEach(element => element.addEventListener("click",getAPIdata))
@@ -19,7 +23,10 @@ fetch('https://rawg.io/api/games?token&key=f292e982be664ec2994676e290830bc7')
 
 
 
-
+//write function that calls Rawg API data for all platforms
+//have it report to console log
+//single out noted specific consoles based on html class to generate that list
+//have list pop in app under Showing Card (repos-container)
 
   function getAPIdata(){
     const selectedPlatform = this.textContent;
@@ -48,6 +55,8 @@ fetch('https://rawg.io/api/games?token&key=f292e982be664ec2994676e290830bc7')
 });
 
 }
+
+//add items on list to LS
 
 function gameListClick(){
     var gameid = this.getAttribute("data-id")
