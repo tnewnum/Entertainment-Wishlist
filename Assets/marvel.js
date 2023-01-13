@@ -1,10 +1,10 @@
-// let seriesBtn = document.getElementById('#series')
-// let characterBtn = document.getElementById('#characters')
+let comicsBtn = document.getElementById('comics')
+// let seriesBtn = document.getElementById('series')
+// let characterBtn = document.getElementById('characters')
 
 
 function comics () {
-
-    let comicsBtn = document.querySelector('#comics')
+    let comicsBtn = document.getElementById('comics')
     comicsBtn.addEventListener(`click`, () =>{
 
             //fetch request for comics from API
@@ -61,6 +61,7 @@ function comics () {
 
 
 //  function characters () {
+    // let characterBtn = document.getElementById('characters')
 
 //  //fetch request for characters from API
 //  fetch('https://gateway.marvel.com/v1/public/characters?ts=1&apikey=edeef70bcb85a7b1d24cbec22d4ae7d4&hash=4210b3cb502a39ad299a252758911801')
