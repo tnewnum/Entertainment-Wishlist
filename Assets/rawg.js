@@ -6,18 +6,18 @@ const apiKey = "f292e982be664ec2994676e290830bc7";
 const platformButtonEl = document.querySelectorAll(".class-pc")
 platformButtonEl.forEach(element => element.addEventListener("click",getAPIdata))
 
-fetch(`https://rawg.io/api/games?token&key=${apiKey}`)
-  .then(res => res.json())
-  .then(data => console.log(data));
+// fetch(`https://rawg.io/api/games?token&key=${apiKey}`)
+//   .then(res => res.json())
+//   .then(data => console.log(data));
 
-fetch('https://rawg.io/api/games?token&key=f292e982be664ec2994676e290830bc7')
-  .then(function (response) {
-    return response.json ()
+// fetch('https://rawg.io/api/games?token&key=f292e982be664ec2994676e290830bc7')
+//   .then(function (response) {
+//     return response.json ()
       
-    })
-  .then(function (data) {
-      console.log(data);
-  });
+//     })
+//   .then(function (data) {
+//       console.log(data);
+//   });
 
 
 
