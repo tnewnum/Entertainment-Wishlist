@@ -1,8 +1,10 @@
 let listGroup = document.querySelector('#repos-container')
 
-function comics () {
+function comics () {    
     let comicsBtn = document.getElementById('comics')
     comicsBtn.addEventListener(`click`, () =>{
+        
+        listGroup.textContent = '';
 
             //fetch request for comics from API
             fetch('https://gateway.marvel.com/v1/public/comics?ts=1&apikey=edeef70bcb85a7b1d24cbec22d4ae7d4&hash=4210b3cb502a39ad299a252758911801')
@@ -21,7 +23,7 @@ function comics () {
        
                 //list of empty arrays established for later use
                 let comics = []
-                //    let images = []          
+                let images = []          
        
                 for (let i = 0; i < 20; i++) {
                              
@@ -40,25 +42,25 @@ function comics () {
 
                    repoEl.appendChild(titleEl)
                    listGroup.appendChild(repoEl)
-       
-                }
 
-                // for (let i = 0; i < 20; i++) {       
-                 
-                //     if ( data.data.results[i].images[0] !== undefined) {
-    
-                //      images.push(data.data.results[i].images[0].path)
-                //         console.log(images)
-    
+                //    Potential Code to write images to the page 
+                //    if ( data.data.results[i].images[0] !== undefined) {    
+                //     images.push(data.data.results[i].images[0].path)
+                //     // console.log(images)       
                 //     }
-    
-    
-                // }
+
+                //     let imageList = images +'.jpg'
+
+                //     console.log(imageList)
+
+                //     let imageEl = document.createElement('img')
+                //     imageEl.setAttribute('src', imageList)
+                //     listGroup.append(imageEl)
+
        
+                }       
        
             })
-
-
     })
  
 }; comics ()
@@ -68,6 +70,8 @@ function series () {
 
 let seriesBtn = document.getElementById('series')
 seriesBtn.addEventListener(`click`, () =>{
+
+    listGroup.textContent = '';
 
     //fetch request fpr series from API
     fetch('https://gateway.marvel.com/v1/public/series?ts=1&apikey=edeef70bcb85a7b1d24cbec22d4ae7d4&hash=4210b3cb502a39ad299a252758911801')
@@ -111,6 +115,8 @@ seriesBtn.addEventListener(`click`, () =>{
 function characters () {
     let characterBtn = document.getElementById('characters')
     characterBtn.addEventListener(`click`, () =>{
+
+        listGroup.textContent = '';
 
 
         //fetch request for characters from API
