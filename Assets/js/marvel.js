@@ -1,7 +1,3 @@
-let comicsBtn = document.getElementById('comics')
-// let seriesBtn = document.getElementById('series')
-// let characterBtn = document.getElementById('characters')
-
 
 function comics () {
     let comicsBtn = document.getElementById('comics')
@@ -62,6 +58,8 @@ function comics () {
 
 //  function characters () {
     // let characterBtn = document.getElementById('characters')
+    characterBtn.addEventListener(`click`, () =>{
+
 
 //  //fetch request for characters from API
 //  fetch('https://gateway.marvel.com/v1/public/characters?ts=1&apikey=edeef70bcb85a7b1d24cbec22d4ae7d4&hash=4210b3cb502a39ad299a252758911801')
@@ -89,6 +87,10 @@ function comics () {
 
 
 // function series () {
+
+// let seriesBtn = document.getElementById('series')
+seriesBtn.addEventListener(`click`, () =>{
+
 //     //fetch request fpr series from API
 //     fetch('https://gateway.marvel.com/v1/public/series?ts=1&apikey=edeef70bcb85a7b1d24cbec22d4ae7d4&hash=4210b3cb502a39ad299a252758911801')
    
