@@ -2,7 +2,6 @@ let saveBtn = document.getElementById("save-button");
 let text = document.getElementById("item-input");
 let ul = document.getElementById("ul")
 
-
 function saveInput() {
 
     saveBtn.addEventListener('click', function(event) {
@@ -26,25 +25,30 @@ function saveInput() {
   
 function renderInput() {
 
-    //covert text to JS object using json.parse
-    let item = JSON.parse(localStorage.getItem("item1"));
-    console.log(item)
+    saveBtn.addEventListener('click', function(event) {
+     event.preventDefault()
+
+     //covert text to JS object using json.parse
+     let item = JSON.parse(localStorage.getItem("item1"));
+     console.log(item)
     
-    //check if data is returned, if not exit function
-    if (item === !null) {
+     //check if data is returned, if not exit function
     
-        let list = document.createElement("div");
-        list.classList ='list-item flex-row justify-space-between align-center'
+    
+     let list = document.createElement("div");
+     list.classList ='list-item flex-row justify-space-between align-center'
        
 
-        var titleEl = document.createElement('span');
-        titleEl.textContent = item;
+     var titleEl = document.createElement('span');
+     titleEl.textContent = item;
+    
        
 
-        list.appendChild(titleEl)
-        ul.appendChild(list)
+     list.appendChild(titleEl)
+     ul.appendChild(list)
+    })
         
-    } 
+    
 }renderInput()
 
 
