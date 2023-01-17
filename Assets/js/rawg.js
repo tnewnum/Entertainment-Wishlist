@@ -30,10 +30,10 @@ platformButtonEl.forEach(element => element.addEventListener("click",getAPIdata)
 
   function getAPIdata(){
     const selectedPlatform = this.textContent;
-  fetch('https://api.rawg.io/api/platforms?token&key=f292e982be664ec2994676e290830bc7')
-.then(res => res.json())
-.then(data => {console.log(data)
-    for(let i = 0; i < data.results.length; i++){
+    fetch('https://api.rawg.io/api/platforms?token&key=f292e982be664ec2994676e290830bc7')
+      .then(res => res.json())
+      .then(data => {console.log(data)
+        for(let i = 0; i < 20; i++){
         console.log(selectedPlatform,data.results[i].name)
         if(data.results[i].name == selectedPlatform){
             let html =""
